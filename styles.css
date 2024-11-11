@@ -1,0 +1,218 @@
+body {
+    font-family: 'Georgia', serif; 
+    background-color: #1c1c1c; 
+    color: #ecf0f1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #1c1c1c, #2f3640); 
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.container {
+    background-color: #34495e; 
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.3); 
+    width: 350px;
+    text-align: center;
+    animation: slideUp 1s ease-out;
+}
+
+
+@keyframes slideUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+h2 {
+    font-family: 'Cambria', serif; 
+    color: #ecf0f1; 
+    font-size: 28px; 
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px; 
+}
+
+label {
+    font-size: 16px; 
+    color: #ecf0f1; 
+    display: block;
+    margin-top: 15px; 
+    text-align: left;
+    font-weight: 500; 
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #7f8c8d; 
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+    font-family: 'Georgia', serif; 
+    box-sizing: border-box; 
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+button {
+    background-color: #4f7391;
+    color: white;
+    padding: 12px 24px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; 
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Georgia', serif; 
+}
+
+button:hover {
+    background-color: #0783e2;
+    transform: translateY(-3px); 
+}
+
+button#copyBtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px; 
+    font-size: 16px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button#copyBtn:hover {
+    background-color: #4f7391;
+    transform: translateY(-2px); 
+}
+
+p {
+    font-size: 18px;
+    margin-top: 25px;
+    font-family: 'Georgia', serif; 
+    font-weight: 500; 
+    letter-spacing: 0.5px; 
+    transition: opacity 0.5s ease;
+}
+
+span#password {
+    font-weight: bold;
+    color: #ecf0f1; 
+    opacity: 0; 
+    animation: revealPassword 1s forwards; 
+}
+
+@keyframes revealPassword {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.footer {
+    font-size: 14px; 
+    color: #ecf0f1;
+    margin-top: 30px;
+    opacity: 0.7;
+    font-family: 'Georgia', serif; 
+}
+
+.footer p {
+    transition: opacity 0.5s ease;
+}
+
+.footer p:hover {
+    opacity: 1; 
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 14px; 
+        padding: 12px; 
+    }
+
+    button {
+        font-size: 16px; 
+        padding: 10px 20px; 
+    }
+
+    button#copyBtn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    p {
+        font-size: 16px; 
+    }
+
+    .footer {
+        font-size: 12px; 
+    }
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px; 
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+
+    button {
+        font-size: 16px; 
+        padding: 10px 18px;
+    }
+
+    button#copyBtn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    p {
+        font-size: 14px; 
+    }
+
+    .footer {
+        font-size: 10px; 
+    }
+}
